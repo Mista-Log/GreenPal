@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FarmGoal } from "@/lib/mock-data";
+import { FarmGoal } from "@/lib/types";
+
 
 export type M3GoalCardProps = {
   goal: FarmGoal;

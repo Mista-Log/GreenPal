@@ -12,7 +12,7 @@ export type FarmGoal = {
   currentValue: number;
   targetValue: number;
   unit: string;
-  icon?: string;
+  icon: string | undefined;
   imageUrl?: string;
   status: "active" | "completed";
   milestones: GoalMilestone[];
