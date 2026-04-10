@@ -13,6 +13,7 @@ import VoiceSearchModal from "./VoiceSearchModal";
 
 type AppTopBarProps = {
   placeholder?: string;
+  showBack: boolean;
 };
 
 type UserProfile = {
