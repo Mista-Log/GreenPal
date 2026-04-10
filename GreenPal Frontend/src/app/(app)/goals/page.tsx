@@ -41,7 +41,7 @@ export default function GoalsPage() {
     fetchGoals();
   }, []);
   const { t } = useTranslation();
-  const { goals } = useGoals();
+  // const { goals } = useGoals();
 
   const activeCount = goals.filter(
     (g: FarmGoal) => g.status === "active"
