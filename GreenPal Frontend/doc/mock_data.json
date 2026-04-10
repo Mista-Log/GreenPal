@@ -1,0 +1,124 @@
+{
+  "tips": [
+    {
+      "id": "tip_feat_001",
+      "title": "Best Planting Time",
+      "duration_minutes": 5,
+      "category": "Crop Planting",
+      "image": "/figma/tips-card-1.png",
+      "slug": "best-planting-time",
+      "is_featured": true
+    },
+    {
+      "id": "tip_soil_001",
+      "title": "Soil Testing with NPK",
+      "duration_minutes": 5,
+      "category": "Soil Care",
+      "image": "/figma/tips-frame-7.png",
+      "slug": "soil-testing-with-npk",
+      "is_featured": false
+    },
+    {
+      "id": "tip_org_001",
+      "title": "Encourage Beneficial Insects",
+      "duration_minutes": 5,
+      "category": "Organic Farming",
+      "image": "/figma/tips-frame-12.png",
+      "slug": "beneficial-insects-guide",
+      "is_featured": false
+    }
+  ],
+  "homeQuickActions": [
+    {
+      "id": "qa_voice",
+      "label": "Voice",
+      "icon": "mic",
+      "action": "voice_query"
+    },
+    {
+      "id": "qa_tips",
+      "label": "Tips",
+      "icon": "lightbulb",
+      "action": "open_tips"
+    },
+    {
+      "id": "qa_history",
+      "label": "History",
+      "icon": "history",
+      "action": "history"
+    },
+    {
+      "id": "qa_bookmarks",
+      "label": "Bookmarks",
+      "icon": "bookmark",
+      "action": "/bookmarks"
+    }
+  ],
+  "homeRecentActivity": [
+    {
+      "id": "act_001",
+      "type": "diagnosis",
+      "title": "Cassava Mosaic Disease",
+      "occurred_at": "2026-03-30T13:00:00Z",
+      "confidence": 92
+    },
+    {
+      "id": "act_002",
+      "type": "tip",
+      "title": "Best Planting Time",
+      "occurred_at": "2026-03-29T10:00:00Z",
+      "confidence": null
+    }
+  ],
+  "homeWeather": {
+    "temperature": "28°",
+    "location": "Kano",
+    "condition": "Sunny",
+    "icon": "sunny"
+  },
+  "profileSummary": {
+    "name": "Oluwasegun O.",
+    "monogram": "O",
+    "joinedYear": "2025",
+    "email": "oluwasegun@greenpal.com"
+  },
+  "farmGoals": [
+    {
+      "id": "goal_maize_yield",
+      "title": "Maize Harvest Target",
+      "category": "Crops",
+      "currentValue": 4.2,
+      "targetValue": 5.0,
+      "unit": "Tons/Ha",
+      "icon": "agriculture",
+      "imageUrl": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=800&q=80",
+      "status": "active",
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Soil Nitrogen Testing",
+          "isCompleted": true,
+          "reasoning": "Essential for accurate fertilizer application, preventing leaching and saving costs."
+        },
+        {
+          "id": "m2",
+          "title": "Pre-planting Pest Scan",
+          "isCompleted": true,
+          "reasoning": "Detects larvae early, reducing the need for heavy chemical intervention later."
+        },
+        {
+          "id": "m3",
+          "title": "Early Sprouting Monitoring",
+          "isCompleted": true,
+          "reasoning": "Ensures germination percentage is sufficient to meet total harvest projections."
+        },
+        {
+          "id": "m4",
+          "title": "Harvest Humidity Check",
+          "isCompleted": false,
+          "reasoning": "Grains must be <14% moisture to prevent post-harvest mold and market loss."
+        }
+      ]
+    }
+  ]
+}

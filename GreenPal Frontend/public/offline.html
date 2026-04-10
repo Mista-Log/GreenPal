@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline | Greenpal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f7fbf1;
+      color: #191d17;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: #386a20;
+      margin-bottom: 12px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    p {
+      opacity: 0.8;
+      max-width: 320px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: #386a20;
+      color: white;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #2d5519;
+    }
+    .status {
+      margin-top: 32px;
+      padding: 16px;
+      background-color: rgba(56, 106, 32, 0.1);
+      border-radius: 12px;
+      max-width: 320px;
+    }
+    .status p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">🌱</div>
+  <h1>You're Offline</h1>
+  <p>Greenpal needs a network connection for AI diagnosis and weather updates. Some features may still be available from cache.</p>
+  <a href="/" class="btn">Try Again</a>
+  <div class="status">
+    <p>💡 Tip: Cached content from your previous visit may still be available.</p>
+  </div>
+</body>
+</html>
