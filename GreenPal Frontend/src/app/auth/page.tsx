@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Borel } from "next/font/google";
+// import { Borel } from "next/font/google";
 
-const borel = Borel({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
+// const borel = Borel({
+//   weight: "400",
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 
 export default function AuthPage() {
@@ -37,7 +37,7 @@ export default function AuthPage() {
           <div className="flex flex-col items-center px-6">
             <div className="flex items-center justify-center gap-2.5">
               <div
-                className={`text-4xl font-bold flex items-center gap-1 ${borel.className}`}
+                className="text-4xl font-bold flex items-center gap-1 font-sans"
               >
                 <span className="text-primary tracking-tighter">Greenpal</span>
               </div>
