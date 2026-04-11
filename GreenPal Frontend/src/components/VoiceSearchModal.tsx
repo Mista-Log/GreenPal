@@ -6,9 +6,6 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import { motion, AnimatePresence } from "framer-motion";
-const isBrowser = typeof window !== "undefined";
-
-
 
 type VoiceSearchModalProps = {
   isOpen: boolean;
@@ -22,21 +19,12 @@ export default function VoiceSearchModal({
   onResult,
 }: VoiceSearchModalProps) {
   const { t, i18n } = useTranslation();
-  const speech = isBrowser
-    ? useSpeechRecognition()
-    : {
-        transcript: "",
-        listening: false,
-        resetTranscript: () => {},
-        browserSupportsSpeechRecognition: false,
-      };
-
   const {
     transcript,
     listening,
     resetTranscript,
     browserSupportsSpeechRecognition,
-  } = speech;
+  } = useSpeechRecognition();
 
   const [status, setStatus] = useState<"idle" | "listening" | "error">("idle");
 
@@ -76,18 +64,14 @@ export default function VoiceSearchModal({
   const startListening = useCallback(() => {
     resetTranscript();
     const locale = getRecognitionLocale(i18n.language);
-    if (isBrowser) {
-      SpeechRecognition.startListening({
-        continuous: true,
-        language: locale,
-      });
-    }
+    SpeechRecognition.startListening({
+      continuous: true,
+      language: locale,
+    });
   }, [getRecognitionLocale, i18n.language, resetTranscript]);
 
   const stopListening = useCallback(() => {
-    if (isBrowser) {
     SpeechRecognition.stopListening();
-  }
   }, []);
 
   // Sync modal state with speech recognition API (external system)

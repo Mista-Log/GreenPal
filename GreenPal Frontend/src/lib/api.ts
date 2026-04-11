@@ -8,13 +8,16 @@ if (!BASE_URL) {
 
 
 export async function getMe() {
-  const token = localStorage.getItem("access_token");
+  const token =
+    typeof window !== "undefined"
+      ? localStorage.getItem("access_token")
+      : null;
 
   const res = await fetch(`${BASE_URL}api/v1/auth/me`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: token ? `Bearer ${token}` : "",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
     },
     credentials: "include",
   });
@@ -23,7 +26,6 @@ export async function getMe() {
     throw new Error("Failed to fetch profile");
   }
 
-  
   return res.json();
 }
 
@@ -132,7 +134,7 @@ export async function updateGoal(
 
 // DELETE goal
 export async function deleteGoal(goalId: string): Promise<ApiMessageResponse> {
-  return apiRequest<ApiMessageResponse>(`${BASE_URL}goals/${goalId}`, {
+  return apiRequest<ApiMessageResponse>(`${BASE_URL}api/v1/goals/${goalId}`, {
     method: "DELETE",
   });
 }
