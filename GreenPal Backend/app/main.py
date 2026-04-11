@@ -1,4 +1,4 @@
-from api.router import api_router
+from app.api.router import api_router
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
