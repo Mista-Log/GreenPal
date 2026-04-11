@@ -25,6 +25,7 @@ type UserProfile = {
 
 export default function AppTopBar({
   placeholder,
+  showBack = true, 
 }: AppTopBarProps) {
   const router = useRouter();
   const { t } = useTranslation();

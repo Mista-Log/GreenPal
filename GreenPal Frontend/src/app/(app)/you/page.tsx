@@ -105,7 +105,7 @@ export default function YouPage() {
     <div className="min-h-screen bg-background text-on-surface">
       <div className="relative mx-auto min-h-screen w-full max-w-(--app-shell-max) pb-35">
         <header className="sticky top-0 z-20 bg-background">
-          <AppTopBar />
+          <AppTopBar showBack={false} />
         </header>
 
         <main className="px-4 pt-4 md:px-6 space-y-8">

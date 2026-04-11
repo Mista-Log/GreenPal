@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-on-surface">
       <div className="relative min-h-screen w-full pb-35 lg:max-w-none">
-        <AppTopBar />
+        <AppTopBar showBack={false} />
 
         <main className="px-5 pt-4 md:px-6 lg:px-12 space-y-8 max-w-7xl">
           <section className="relative overflow-hidden rounded-xl bg-surface-container-highest transition-all duration-500 lg:max-w-4xl">
